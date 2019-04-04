@@ -3,8 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    devtool: 'eval-source-map',
-    mode: 'development',
+    mode: 'production',
     entry: './src/js/index.js',
     output: {
         filename: 'bundle.js',
@@ -44,16 +43,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: '大亚湾数据可视化平台',
-            filename: '.dist/index.html',
+            filename: '../index.html',
             template: './src/index.html',
             inject: true
         }),
-        new webpack.HotModuleReplacementPlugin(),
-    ],
-
-  devServer: {
-    contentBase: [path.resolve(__dirname, './dist')],
-    hot: true,
-    port: 8868,
-  },
+    ]
 }

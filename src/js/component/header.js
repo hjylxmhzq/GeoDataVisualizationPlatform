@@ -1,4 +1,5 @@
 import style from '../../style/header.less'
+import React from 'react'
 
 export default function Header(props){
     return (

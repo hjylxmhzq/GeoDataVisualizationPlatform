@@ -4,8 +4,8 @@
   "description": "This is a website demonstrating geography data based on React",
   "main": "index.js",
   "scripts": {
-    "dev": "node bin/dev-server",
-    "build": "npx webpack --mode=production"
+    "dev": "npx webpack-dev-server --config ./webpack.config.js --hot --open --content-base ./dist --mode development",
+    "build": "npx webpack --config ./webpack.production.config.js --mode=production"
   },
   "keywords": [
     "geography",
