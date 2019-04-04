@@ -5,11 +5,12 @@ import style from '../../style/product.less';
 export default class Product extends Component {
     constructor(props) {
         super(props);
+        this.style = this.props.style
     }
 
     render() {
         return (
-            <div className={style.productbox}>
+            <div style={this.style} className={style.productbox}>
                 <h1 className={style.title}>
                     {this.props.title}
                 </h1>
