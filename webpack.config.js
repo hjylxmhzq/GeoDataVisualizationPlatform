@@ -30,14 +30,16 @@ module.exports = {
                         loader: 'less-loader'
                     }
                 ]
-            },
-            {
+            },{
                 test: /.(js|jsx)/,
                 loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-react'],
                         compact: 'auto'
                     }
+            },{
+                test: /\.(jpg|jpeg|png)$/,
+                use: ['file-loader']
             }
         ]
     },
