@@ -43,15 +43,6 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: '大亚湾数据可视化平台',
-            filename: '.dist/index.html',
-            template: './src/index.html',
-            inject: true
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-    ],
 
   devServer: {
     contentBase: [path.resolve(__dirname, './dist')],
