@@ -8,7 +8,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist/js/'),
-        publicPath: '/js/'
+        publicPath: './js/'
     },
     module: {
         rules: [
@@ -37,6 +37,9 @@ module.exports = {
                         presets: ['@babel/preset-react'],
                         compact: 'auto'
                     }
+            },{
+                test: /\.(jpg|jpeg|png|json)$/,
+                use: ['file-loader']
             }
         ]
     }
