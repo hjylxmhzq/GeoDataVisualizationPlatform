@@ -10,7 +10,8 @@ export default class Product extends Component {
 
     render() {
         return (
-            <div style={this.style} className={style.productbox}>
+            <div className={style.outerbox}>
+            <div style={this.style} id={this.props.id} className={style.productbox}>
                 <h1 className={style.title}>
                     {this.props.title}
                 </h1>
@@ -18,6 +19,7 @@ export default class Product extends Component {
                     {this.props.description}
                 </p>
                 <div className={style.contentbox}>{this.props.content}</div>
+            </div>
             </div>
         )
     }
