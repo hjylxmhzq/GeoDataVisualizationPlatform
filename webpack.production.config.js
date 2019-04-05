@@ -37,6 +37,9 @@ module.exports = {
                         presets: ['@babel/preset-react'],
                         compact: 'auto'
                     }
+            },{
+                test: /\.(jpg|jpeg|png|json)$/,
+                use: ['file-loader']
             }
         ]
     },
