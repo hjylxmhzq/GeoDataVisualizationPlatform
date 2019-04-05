@@ -8,7 +8,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist/js/'),
-        publicPath: '/'
+        publicPath: '/js/'
     },
     module: {
         rules: [
@@ -37,18 +37,7 @@ module.exports = {
                         presets: ['@babel/preset-react'],
                         compact: 'auto'
                     }
-            },{
-                test: /\.(jpg|jpeg|png|json)$/,
-                use: ['file-loader']
             }
         ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: '大亚湾数据可视化平台',
-            filename: '../index.html',
-            template: './src/index.html',
-            inject: true
-        }),
-    ]
+    }
 }
