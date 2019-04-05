@@ -1,8 +1,13 @@
 .selectorbox {
+    transition: width 1s;
     z-index: 999;
     list-style-type: none;
     padding-left: 0;
-    width: 150px;
+    width: 35px;
+    background-color: #f2f2f2;
+    &:hover {
+        width: 150px;
+    }
     & a {
         text-decoration: none;
         color: black;
@@ -16,6 +21,12 @@
         padding: 11px;
         border: 1px solid #aaa;
         margin-top: -1px;
+        &:first-child {
+            border-top-right-radius: 10px;
+        }
+        &:last-child {
+            border-bottom-right-radius: 10px;
+        }
         &:hover {
             background-color: rgb(160, 160, 255);
         }

@@ -38,7 +38,7 @@ module.exports = {
                         compact: 'auto'
                     }
             },{
-                test: /\.(jpg|jpeg|png)$/,
+                test: /\.(jpg|jpeg|png|json)$/,
                 use: ['file-loader']
             }
         ]
