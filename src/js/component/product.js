@@ -14,28 +14,7 @@ export default class Product extends Component {
     }
 
     handleClick() {
-        let content = (
-            <div style={{width: '100%', height: '100%', position: 'relative'}}>
-                {
-                    this.props.content
-                }
-                <div className={style.closeicon} onClick={this.handleClose.bind(this)}>╳</div>
-            </div>
-        );
-        this.setState({ contentBoxStyle: {width: '100%', height: '90%'} })
-        setTimeout(function() {
-            this.setState({
-                content,
-            })}.bind(this), 1000);
-    }
-
-    handleClose(e) {
-        e.stopPropagation();
-        this.state.content = null;
-        this.setState({
-            contentBoxStyle: {width: '70%'},
-            content: this.props.placeholder,
-        })
+        this.props.handleClick(this.props.content);
     }
 
     render() {

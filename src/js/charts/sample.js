@@ -19,7 +19,7 @@ export default class EchartsSample extends Component {
         let app = {};
         let option = null;
         app.title = '北京公交路线 - 百度地图';
-
+        this.state.chart.showLoading();
         $.get('./static/data/lines-bus.json', function(data) {
             let busLines = [].concat.apply([], data.map(function (busLine, idx) {
                 let prevPt;
@@ -163,13 +163,14 @@ export default class EchartsSample extends Component {
                     progressive: 200
                 }]
             };
+            this.state.chart.hideLoading();
             this.state.chart.setOption(option);
         }.bind(this));
         
     }
 
     render() {
-        return <div style={{width: '100%', height: '100%'}} id="echartssample"></div>
+        return <div style={{width: '100%', height: '100%', zIndex: 10000}} id="echartssample"></div>
     }
 }
 
